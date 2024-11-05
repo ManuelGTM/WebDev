@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  height: 1em;
+}
+
+.card-container {
+  border-radius: 0.9em;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  width: 600px;
+}
+
+.result-card {
+  width: 100%;
+  background-color: hsl(252, 100%, 58%);
+  color: white;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.9em;
+  position: relative;
+  gap: 1.3em;
+}
+
+.bubble-container {
+  background: radial-gradient(
+    circle at center top,
+    hsla(234, 85%, 45%, 1),
+    hsla(256, 72%, 46%, 0.2)
+  );
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 50%;
+  padding: 1em;
+  gap: 0.5em;
+}
+
+.large-text {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 0.5em;
+  opacity: 0.7;
+}
+
+.result-text {
+  padding: 1em;
+}
+
+.summary-card {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2em 1em 2em 4em;
+  border-radius: 0.9em;
+  width: 100%;
+  margin-left: -2em;
+}
+
+.summary-card p {
+  color: gray;
+}
+.summary-card p strong {
+  color: black;
+}
+
+.result-item {
+  padding: 0.7em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7em;
+}
+
+.result-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.result-info img {
+  height: 1em;
+}
+
+.result-1 {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 5%);
+}
+
+.result-2 {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 5%);
+}
+.result-3 {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 5%);
+}
+.result-4 {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 5%);
+}
+
+#continue {
+  background-color: hsl(224, 30%, 27%);
+  width: 100%;
+  margin-top: 1.5em;
+  padding: 0.7em;
+  border-radius: 2em;
+  border-color: transparent;
+  color: hsl(221, 100%, 96%);
+}
+
+#continue:hover {
+  background-color: hsl(254, 85%, 45%);
+  cursor: pointer;
+}
