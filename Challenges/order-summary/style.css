@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: ubuntu;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+  height: 600px;
+  width: 450px;
+  margin-top: -200px;
+
+  padding: 2em;
+  padding-top: 200px;
+
+  /*border: solid 2px black;*/
+  border-radius: 0.8em;
+}
+
+.card-img,
+.card-img img {
+  position: relative;
+  width: 450px;
+  border-radius: 0.8em 0.8em 0 0;
+}
+
+.card-text {
+  padding: 1.2em;
+  color: hsl(223, 47%, 23%);
+  text-align: center;
+  width: 100%;
+}
+
+.plan-card {
+  width: 100%;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.music-icon {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.music-icon img {
+  height: 2.5em;
+}
+
+.music-icon a {
+  color: purple;
+}
+
+.change-link a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
+
+.buttons-section {
+  width: 100%;
+  margin-top: 1.8em;
+  display: flex;
+  justify-items: space-between;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.button-style {
+  font-weight: bold;
+  border-radius: 0.7em;
+  padding: 1em;
+  border: none;
+  width: 100%;
+}
+.payment-button {
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+}
+
+.payment-button:hover {
+  background-color: hsl(223, 47%, 23%);
+}
+
+.cancel-button {
+  background-color: transparent;
+  color: gray;
+}
