@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --light-purple: hsl(254, 88%, 90%);
+  --dark-purple: hsl(256, 67%, 59%);
+  --light-yellow: hsl(31, 66%, 93%);
+  --dark-yellow: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+  --main-font: "DM Sans", sans-serif;
+  --font-sizing: 18px;
+  --font-weight: 400;
+  --gap: 2rem;
+  --padding: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: var(--font-sizing);
+  font-weight: var(--font-weight);
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.bento-container {
+  max-width: 1440px;
+  height: auto;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "block1 block2 block3"
+    "block1 block2 block3"
+    "block1 block4 block4";
+  gap: var(--gap);
+  padding: var(--padding);
+}
+
+.block {
+  display: grid;
+  gap: var(--gap);
+  border-radius: 1rem;
+}
+
+/* Bloque 1 */
+.block1 {
+  grid-area: block1;
+}
+
+.block1 .box {
+  background-color: var(--light-yellow);
+  padding: var(--padding);
+  border-radius: 1rem;
+}
+
+/* Bloque 2 */
+.block2 {
+  grid-area: block2;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "upper-box upper-box"
+    "left-box right-box";
+}
+
+.upper-box {
+  grid-area: upper-box;
+  background-color: var(--dark-purple);
+  padding: var(--padding);
+  border-radius: 1rem;
+  color: var(--white);
+}
+
+.left-box {
+  grid-area: left-box;
+  background-color: var(--white);
+  padding: var(--padding);
+  border-radius: 1rem;
+}
+
+.right-box {
+  grid-area: right-box;
+  background-color: var(--dark-yellow);
+  padding: var(--padding);
+  border-radius: 1rem;
+}
+
+/* Bloque 3 */
+.block3 {
+  grid-area: block3;
+}
+
+.block3 .box {
+  background-color: var(--dark-yellow);
+  padding: var(--padding);
+  border-radius: 1rem;
+}
+
+/* Bloque 4 */
+.block4 {
+  grid-area: block4;
+  grid-template-columns: 0.97fr 1fr 1fr;
+  grid-template-areas: "box4-1 box4-2 box4-2";
+}
+
+.block4 > * {
+  padding: var(--padding);
+  border-radius: 1rem;
+}
+
+.block4 .box1 {
+  grid-area: box4-1;
+  background-color: var(--white);
+}
+
+.block4 .box2 {
+  grid-area: box4-2;
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+/* Títulos y contenido */
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
